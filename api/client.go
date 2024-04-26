@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -388,7 +388,7 @@ func NewConsoleCredentials(accessKey, secretKey, location, clientIP string) (*cr
 
 			return creds, nil
 		}
-	// default authentication for Console is via STS (Security Token Service) against MinIO
+	// default authentication for Console is via STS (Security Token Service) against FST
 	default:
 		{
 			return stsCredentials(minioURL, accessKey, secretKey, location, clientIP)
@@ -405,7 +405,7 @@ func getConsoleCredentialsFromSession(claims *models.Principal) *credentials.Cre
 	return credentials.NewStaticV4(claims.STSAccessKeyID, claims.STSSecretAccessKey, claims.STSSessionToken)
 }
 
-// newMinioClient creates a new MinIO client based on the ConsoleCredentials extracted
+// newMinioClient creates a new FST client based on the ConsoleCredentials extracted
 // from the provided session token
 func newMinioClient(claims *models.Principal, clientIP string) (*minio.Client, error) {
 	creds := getConsoleCredentialsFromSession(claims)
@@ -420,11 +420,11 @@ func newMinioClient(claims *models.Principal, clientIP string) (*minio.Client, e
 		return nil, err
 	}
 	// set user-agent to differentiate Console UI requests for auditing.
-	minioClient.SetAppInfo("MinIO Console", pkg.Version)
+	minioClient.SetAppInfo("FST Console", pkg.Version)
 	return minioClient, nil
 }
 
-// computeObjectURLWithoutEncode returns a MinIO url containing the object filename without encoding
+// computeObjectURLWithoutEncode returns a FST url containing the object filename without encoding
 func computeObjectURLWithoutEncode(bucketName, prefix string) (string, error) {
 	endpoint := getMinIOServer()
 	u, err := xnet.ParseHTTPURL(endpoint)

@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -324,9 +324,9 @@ func GetSubnetInfoResponse(session *models.Principal, params subnetApi.SubnetInf
 	client := &xhttp.Client{
 		Client: GetConsoleHTTPClient("", clientIP),
 	}
-	// license gets seeded to us by MinIO
+	// license gets seeded to us by FST
 	seededLicense := os.Getenv(EnvSubnetLicense)
-	// if it's missing, we will gracefully fallback to attempt to fetch it from MinIO
+	// if it's missing, we will gracefully fallback to attempt to fetch it from FST
 	if seededLicense == "" {
 		mAdmin, err := NewMinioAdminClient(params.HTTPRequest.Context(), session)
 		if err != nil {

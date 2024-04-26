@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -83,7 +83,7 @@ func registerLoginHandlers(api *operations.ConsoleAPI) {
 	})
 }
 
-// login performs a check of ConsoleCredentials against MinIO, generates some claims and returns the jwt
+// login performs a check of ConsoleCredentials against FST, generates some claims and returns the jwt
 // for subsequent authentication
 func login(credentials ConsoleCredentialsI, sessionFeatures *auth.SessionFeatures) (*string, error) {
 	// try to obtain consoleCredentials,
@@ -242,7 +242,7 @@ func getLoginDetailsResponse(params authApi.LoginDetailParams, openIDProviders o
 	return loginDetails, nil
 }
 
-// verifyUserAgainstIDP will verify user identity against the configured IDP and return MinIO credentials
+// verifyUserAgainstIDP will verify user identity against the configured IDP and return FST credentials
 func verifyUserAgainstIDP(ctx context.Context, provider auth.IdentityProviderI, code, state string) (*credentials.Credentials, error) {
 	userCredentials, err := provider.VerifyIdentity(ctx, code, state)
 	if err != nil {

@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -108,7 +108,7 @@ func getListConfigResponse(session *models.Principal, params cfgApi.ListConfigPa
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 
@@ -173,7 +173,7 @@ func getConfigResponse(session *models.Principal, params cfgApi.ConfigInfoParams
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 
@@ -238,7 +238,7 @@ func setConfigResponse(session *models.Principal, params cfgApi.SetConfigParams)
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 	configName := params.Name
@@ -264,7 +264,7 @@ func resetConfigResponse(session *models.Principal, params cfgApi.ResetConfigPar
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 

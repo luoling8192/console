@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2022 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2022 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -134,13 +134,13 @@ export const COMMUNITY_PLAN_FEATURES = [
         >
           <span>
             Designed for developers who are building open source applications in
-            compliance with the <LicenseLink /> license, MinIO Trademarks and
+            compliance with the <LicenseLink /> license, FST Trademarks and
             are able to self support themselves. It is fully featured. If you
-            distribute, host or create derivative works of the MinIO software
+            distribute, host or create derivative works of the FST software
             over the network, the <LicenseLink /> license requires that you also
             distribute the complete, corresponding source code of the combined
             work under the same <LicenseLink /> license. This requirement
-            applies whether or not you modified MinIO.
+            applies whether or not you modified FST.
             <br />
             <br />
             <span
@@ -233,10 +233,10 @@ export const STANDARD_PLAN_FEATURES = [
           <span>
             Designed for customers who require a commercial license and can
             mostly self-support but want the peace of mind that comes with the
-            MinIO Subscription Network’s suite of operational capabilities and
+            FST Subscription Network’s suite of operational capabilities and
             direct-to-engineer interaction. The Standard version is fully
             featured but with SLA limitations. <br /> <br /> To learn more about
-            the MinIO Subscription Network
+            the FST Subscription Network
           </span>{" "}
           <a
             href="https://min.io/product/subnet?ref=con"
@@ -349,7 +349,7 @@ export const ENTERPRISE_PLAN_FEATURES = [
             Designed for mission critical environments where both a license and
             strict SLAs are required. The Enterprise version is fully featured
             but comes with additional capabilities. <br /> <br /> To learn more
-            about the MinIO Subscription Network
+            about the FST Subscription Network
           </span>{" "}
           <a
             href="https://min.io/product/subnet?ref=con"

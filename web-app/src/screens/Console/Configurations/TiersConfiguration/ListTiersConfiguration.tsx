@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -316,7 +316,7 @@ const ListTiersConfiguration = () => {
                   tooltip={
                     hasSetTier
                       ? ""
-                      : "You require additional permissions in order to create a new Tier. Please ask your MinIO administrator to grant you " +
+                      : "You require additional permissions in order to create a new Tier. Please ask your FST administrator to grant you " +
                         IAM_SCOPES.ADMIN_SET_TIER +
                         " permission in order to create a Tier."
                   }
@@ -440,10 +440,10 @@ const ListTiersConfiguration = () => {
                         iconComponent={<TiersIcon />}
                         help={
                           <Fragment>
-                            Tiers are used by the MinIO Object Lifecycle
+                            Tiers are used by the FST Object Lifecycle
                             Management which allows creating rules for time or
                             date based automatic transition or expiry of
-                            objects. For object transition, MinIO automatically
+                            objects. For object transition, FST automatically
                             moves the object to a configured remote storage
                             tier.
                             <br />
@@ -469,10 +469,10 @@ const ListTiersConfiguration = () => {
                     iconComponent={<TiersIcon />}
                     help={
                       <Fragment>
-                        Tiers are used by the MinIO Object Lifecycle Management
+                        Tiers are used by the FST Object Lifecycle Management
                         which allows creating rules for time or date based
                         automatic transition or expiry of objects. For object
-                        transition, MinIO automatically moves the object to a
+                        transition, FST automatically moves the object to a
                         configured remote storage tier.
                         <br />
                         <br />

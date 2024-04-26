@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2023 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2023 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -24,6 +24,8 @@ export const MinIOPlan =
 type LogoVar = "simple" | "AGPL" | "standard" | "enterprise";
 
 export const getLogoVar = (): LogoVar => {
+  return 'simple';
+
   let logoVar: LogoVar = "AGPL";
   switch (MinIOPlan.toLowerCase()) {
     case "enterprise":

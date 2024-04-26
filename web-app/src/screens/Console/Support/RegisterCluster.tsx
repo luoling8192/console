@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -38,7 +38,7 @@ const RegisterCluster = ({ compactMode = false }: IRegisterCluster) => {
   );
 
   const registerMessage =
-    "Please use your MinIO Subscription Network login credentials to register this cluster and enable this feature.";
+    "Please use your FST Subscription Network login credentials to register this cluster and enable this feature.";
 
   if (compactMode) {
     return (

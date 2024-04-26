@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -37,7 +37,7 @@ func TestGetTiers(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 	// Test-1 : getBucketLifecycle() get list of tiers
-	// mock lifecycle response from MinIO
+	// mock lifecycle response from FST
 	returnListMock := []*madmin.TierConfig{
 		{
 			Version: "V1",

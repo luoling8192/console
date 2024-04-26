@@ -2,7 +2,7 @@
 
 swagger: "2.0"
 info:
-  title: MinIO Console Server
+  title: FST Console Server
   version: 0.1.0
 consumes:
   - application/json
@@ -2239,7 +2239,7 @@ paths:
 
   /configs/export:
     get:
-      summary: Export the current config from MinIO server
+      summary: Export the current config from FST server
       operationId: ExportConfig
       responses:
         200:
@@ -2254,7 +2254,7 @@ paths:
         - Configuration
   /configs/import:
     post:
-      summary: Uploads a file to import MinIO server config.
+      summary: Uploads a file to import FST server config.
       consumes:
         - multipart/form-data
       parameters:

@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -56,7 +56,7 @@ type ConsoleWebsocketAdmin interface {
 type wsAdminClient struct {
 	// websocket connection.
 	conn wsConn
-	// MinIO admin Client
+	// FST admin Client
 	client MinioAdmin
 }
 
@@ -80,7 +80,7 @@ type ConsoleWebsocketMClient interface {
 type wsMinioClient struct {
 	// websocket connection.
 	conn wsConn
-	// MinIO admin Client
+	// FST admin Client
 	client minioClient
 }
 
@@ -310,7 +310,7 @@ func newWebSocketAdminClient(conn *websocket.Conn, autClaims *models.Principal) 
 
 	clientIP := wsConnection.remoteAddress()
 	// Only start Websocket Interaction after user has been
-	// authenticated with MinIO
+	// authenticated with FST
 	mAdmin, err := newAdminFromClaims(autClaims, clientIP)
 	if err != nil {
 		LogError("error creating madmin client: %v", err)
@@ -328,7 +328,7 @@ func newWebSocketAdminClient(conn *websocket.Conn, autClaims *models.Principal) 
 // newWebSocketS3Client returns a wsAdminClient authenticated as Console admin
 func newWebSocketS3Client(conn *websocket.Conn, claims *models.Principal, bucketName, prefix string) (*wsS3Client, error) {
 	// Only start Websocket Interaction after user has been
-	// authenticated with MinIO
+	// authenticated with FST
 	clientIP, _, err := net.SplitHostPort(conn.RemoteAddr().String())
 	if err != nil {
 		// In case there's an error, return an empty string
@@ -353,7 +353,7 @@ func newWebSocketS3Client(conn *websocket.Conn, claims *models.Principal, bucket
 
 func newWebSocketMinioClient(conn *websocket.Conn, claims *models.Principal) (*wsMinioClient, error) {
 	// Only start Websocket Interaction after user has been
-	// authenticated with MinIO
+	// authenticated with FST
 	clientIP, _, err := net.SplitHostPort(conn.RemoteAddr().String())
 	if err != nil {
 		// In case there's an error, return an empty string

@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2022 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2022 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -287,7 +287,7 @@ const OBListBuckets = () => {
                     title={"Buckets"}
                     help={
                       <Fragment>
-                        MinIO uses buckets to organize objects. A bucket is
+                        FST uses buckets to organize objects. A bucket is
                         similar to a folder or directory in a filesystem, where
                         each bucket can hold an arbitrary number of objects.
                         <br />

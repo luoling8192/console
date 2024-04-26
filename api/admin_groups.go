@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -79,7 +79,7 @@ func getListGroupsResponse(session *models.Principal, params groupApi.ListGroups
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 
@@ -97,7 +97,7 @@ func getListGroupsResponse(session *models.Principal, params groupApi.ListGroups
 	return listGroupsResponse, nil
 }
 
-// groupInfo calls MinIO server get Group's info
+// groupInfo calls FST server get Group's info
 func groupInfo(ctx context.Context, client MinioAdmin, group string) (*madmin.GroupDesc, error) {
 	groupDesc, err := client.getGroupDescription(ctx, group)
 	if err != nil {
@@ -114,7 +114,7 @@ func getGroupInfoResponse(session *models.Principal, params groupApi.GroupInfoPa
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 
@@ -138,7 +138,7 @@ func getGroupInfoResponse(session *models.Principal, params groupApi.GroupInfoPa
 	return groupResponse, nil
 }
 
-// addGroupAdd a MinIO group with the defined members
+// addGroupAdd a FST group with the defined members
 func addGroup(ctx context.Context, client MinioAdmin, group string, members []string) error {
 	gAddRemove := madmin.GroupAddRemove{
 		Group:    group,
@@ -165,7 +165,7 @@ func getAddGroupResponse(session *models.Principal, params groupApi.AddGroupPara
 	if err != nil {
 		return ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 
@@ -208,7 +208,7 @@ func getRemoveGroupResponse(session *models.Principal, params groupApi.RemoveGro
 	if err != nil {
 		return ErrorWithContext(ctx, err)
 	}
-	// Create a MinIO Admin Client interface implementation
+	// Create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 
@@ -302,7 +302,7 @@ func getUpdateGroupResponse(session *models.Principal, params groupApi.UpdateGro
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 

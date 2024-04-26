@@ -1,9 +1,9 @@
-# Developing MinIO Console
+# Developing FST Console
 
-The MinIO Console requires the [MinIO Server](https://github.com/minio/minio). For development purposes, you also need
-to run both the MinIO Console web app and the MinIO Console server.
+The FST Console requires the [FST Server](https://github.com/minio/minio). For development purposes, you also need
+to run both the FST Console web app and the FST Console server.
 
-## Running MinIO Console server
+## Running FST Console server
 
 Build the server in the main folder by running:
 
@@ -23,18 +23,18 @@ CONSOLE_DEV_MODE=on
 ./console server
 ```
 
-## Running MinIO Console web app
+## Running FST Console web app
 
 Refer to `/web-app` [instructions](/web-app/README.md) to run the web app locally.
 
-# Building with MinIO
+# Building with FST
 
-To test console in its shipping format, you need to build it from the MinIO repository, the following step will guide
+To test console in its shipping format, you need to build it from the FST repository, the following step will guide
 you to do that.
 
 ### 0. Building with UI Changes
 
-If you are performing changes in the UI components of console and want to test inside the MinIO binary, you need to
+If you are performing changes in the UI components of console and want to test inside the FST binary, you need to
 build assets first.
 
 In the console folder run
@@ -43,11 +43,11 @@ In the console folder run
 make assets
 ```
 
-This will regenerate all the static assets that will be served by MinIO.
+This will regenerate all the static assets that will be served by FST.
 
-### 1. Clone the `MinIO` repository
+### 1. Clone the `FST` repository
 
-In the parent folder of where you cloned this `console` repository, clone the MinIO Repository
+In the parent folder of where you cloned this `console` repository, clone the FST Repository
 
 ```shell
 git clone https://github.com/minio/minio.git
@@ -55,7 +55,7 @@ git clone https://github.com/minio/minio.git
 
 ### 2. Update `go.mod` to use your local version
 
-In the MinIO repository open `go.mod` and after the first `require()` directive add a `replace()` directive
+In the FST repository open `go.mod` and after the first `require()` directive add a `replace()` directive
 
 ```
 ...
@@ -69,9 +69,9 @@ require (
 ...
 ```
 
-### 3. Build `MinIO`
+### 3. Build `FST`
 
-Still in the MinIO folder, run
+Still in the FST folder, run
 
 ```shell
 make build
@@ -79,7 +79,7 @@ make build
 
 # Testing on Kubernetes
 
-If you want to test console on kubernetes, you can perform all the steps from `Building with MinIO`, but change `Step 3`
+If you want to test console on kubernetes, you can perform all the steps from `Building with FST`, but change `Step 3`
 to the following:
 
 ```shell
@@ -139,7 +139,7 @@ Re-enter new password:
 Enter LDAP Password:
 ```
 
-### Add the consoleAdmin policy to user billy on MinIO
+### Add the consoleAdmin policy to user billy on FST
 
 ```
 $ cat > consoleAdmin.json << EOF
@@ -170,7 +170,7 @@ $ mc admin policy create myminio consoleAdmin consoleAdmin.json
 $ mc admin policy attach myminio consoleAdmin --user="uid=billy,dc=example,dc=org"
 ```
 
-## Run MinIO
+## Run FST
 
 ```
 export MINIO_ACCESS_KEY=minio

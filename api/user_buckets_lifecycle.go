@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -84,7 +84,7 @@ func registerBucketsLifecycleHandlers(api *operations.ConsoleAPI) {
 	})
 }
 
-// getBucketLifecycle() gets lifecycle lists for a bucket from MinIO API and returns their implementations
+// getBucketLifecycle() gets lifecycle lists for a bucket from FST API and returns their implementations
 func getBucketLifecycle(ctx context.Context, client MinioClient, bucketName string) (*models.BucketLifecycleResponse, error) {
 	lifecycleList, err := client.getLifecycleRules(ctx, bucketName)
 	if err != nil {
@@ -159,7 +159,7 @@ func getBucketLifecycleResponse(session *models.Principal, params bucketApi.GetB
 	return bucketEvents, nil
 }
 
-// addBucketLifecycle gets lifecycle lists for a bucket from MinIO API and returns their implementations
+// addBucketLifecycle gets lifecycle lists for a bucket from FST API and returns their implementations
 func addBucketLifecycle(ctx context.Context, client MinioClient, params bucketApi.AddBucketLifecycleParams) error {
 	// Configuration that is already set.
 	lfcCfg, err := client.getLifecycleRules(ctx, params.BucketName)
@@ -271,7 +271,7 @@ func getAddBucketLifecycleResponse(session *models.Principal, params bucketApi.A
 	return nil
 }
 
-// editBucketLifecycle gets lifecycle lists for a bucket from MinIO API and updates the selected lifecycle rule
+// editBucketLifecycle gets lifecycle lists for a bucket from FST API and updates the selected lifecycle rule
 func editBucketLifecycle(ctx context.Context, client MinioClient, params bucketApi.UpdateBucketLifecycleParams) error {
 	// Configuration that is already set.
 	lfcCfg, err := client.getLifecycleRules(ctx, params.BucketName)

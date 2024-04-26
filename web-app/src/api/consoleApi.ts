@@ -1791,7 +1791,7 @@ export class HttpClient<SecurityDataType = unknown> {
 }
 
 /**
- * @title MinIO Console Server
+ * @title FST Console Server
  * @version 0.1.0
  * @baseUrl /api/v1
  */
@@ -3959,7 +3959,7 @@ export class Api<
      *
      * @tags Configuration
      * @name ExportConfig
-     * @summary Export the current config from MinIO server
+     * @summary Export the current config from FST server
      * @request GET:/configs/export
      * @secure
      */
@@ -3977,7 +3977,7 @@ export class Api<
      *
      * @tags Configuration
      * @name ImportCreate
-     * @summary Uploads a file to import MinIO server config.
+     * @summary Uploads a file to import FST server config.
      * @request POST:/configs/import
      * @secure
      */

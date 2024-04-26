@@ -8,7 +8,7 @@ web:
 staticClients:
 - id: minio-client-app
   secret: minio-client-app-secret
-  name: 'MinIO Example Client App'
+  name: 'FST Example Client App'
   redirectURIs:
   - 'http://127.0.0.1:9001/oauth_callback'
 connectors:

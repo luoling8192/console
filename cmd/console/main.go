@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -97,10 +97,10 @@ func newApp(name string) *cli.App {
 	app := cli.NewApp()
 	app.Name = name
 	app.Version = pkg.Version + " - " + pkg.ShortCommitID
-	app.Author = "MinIO, Inc."
-	app.Usage = "MinIO Console Server"
-	app.Description = `MinIO Console Server`
-	app.Copyright = "(c) 2021 MinIO, Inc."
+	app.Author = "FST, Inc."
+	app.Usage = "FST Console Server"
+	app.Description = `FST Console Server`
+	app.Copyright = "(c) 2021 FST, Inc."
 	app.Compiled, _ = time.Parse(time.RFC3339, pkg.ReleaseTime)
 	app.Commands = commands
 	app.HideHelpCommand = true // Hide `help, h` command, we already have `minio --help`.

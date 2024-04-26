@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -37,7 +37,7 @@ func registerServiceHandlers(api *operations.ConsoleAPI) {
 	})
 }
 
-// serviceRestart - restarts the MinIO cluster
+// serviceRestart - restarts the FST cluster
 func serviceRestart(ctx context.Context, client MinioAdmin) error {
 	if err := client.serviceRestart(ctx); err != nil {
 		return err
@@ -50,7 +50,7 @@ func serviceRestart(ctx context.Context, client MinioAdmin) error {
 	// Sleep for 6 seconds and then check if the server is online.
 	time.Sleep(6 * time.Second)
 
-	// Fetch the service status of the specified MinIO server
+	// Fetch the service status of the specified FST server
 	_, err := client.serverInfo(ctx)
 	if err != nil {
 		return err
@@ -66,7 +66,7 @@ func getRestartServiceResponse(session *models.Principal, params svcApi.RestartS
 	if err != nil {
 		return ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 

@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -110,17 +110,17 @@ func getTiers(ctx context.Context, client MinioAdmin) (*models.TierListResponse,
 				},
 				Status: client.verifyTierStatus(ctx, tierData.Name) == nil,
 			})
-		case madmin.MinIO:
+		case madmin.FST:
 			tiersList = append(tiersList, &models.Tier{
 				Type: models.TierTypeMinio,
 				Minio: &models.TierMinio{
-					Accesskey: tierData.MinIO.AccessKey,
-					Bucket:    tierData.MinIO.Bucket,
-					Endpoint:  tierData.MinIO.Endpoint,
+					Accesskey: tierData.FST.AccessKey,
+					Bucket:    tierData.FST.Bucket,
+					Endpoint:  tierData.FST.Endpoint,
 					Name:      tierData.Name,
-					Prefix:    tierData.MinIO.Prefix,
-					Region:    tierData.MinIO.Region,
-					Secretkey: tierData.MinIO.SecretKey,
+					Prefix:    tierData.FST.Prefix,
+					Region:    tierData.FST.Region,
+					Secretkey: tierData.FST.SecretKey,
 					Usage:     humanize.IBytes(stats.TotalSize),
 					Objects:   strconv.Itoa(stats.NumObjects),
 					Versions:  strconv.Itoa(stats.NumVersions),

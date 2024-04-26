@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2022 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2022 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -170,7 +170,7 @@ const Register = () => {
   return (
     <Fragment>
       <PageHeaderWrapper
-        label="Register to MinIO Subscription Network"
+        label="Register to FST Subscription Network"
         actions={<HelpMenu />}
       />
 

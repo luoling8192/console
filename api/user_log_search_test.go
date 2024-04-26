@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -37,7 +37,7 @@ func TestLogSearch(t *testing.T) {
 			"time_to_response_ns":     float64(452546530),
 			"remote_host":             "10.116.1.94",
 			"request_id":              "16595A4E30CCFE79",
-			"user_agent":              "MinIO (linux; amd64) madmin-go/0.0.1",
+			"user_agent":              "FST (linux; amd64) madmin-go/0.0.1",
 			"response_status":         "OK",
 			"response_status_code":    float64(200),
 			"request_content_length":  nil,

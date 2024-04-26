@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -392,7 +392,7 @@ func getBucketVersionedResponse(session *models.Principal, params bucketApi.GetB
 	return bucketVResponse, nil
 }
 
-// getAccountBuckets fetches a list of all buckets allowed to that particular client from MinIO Servers
+// getAccountBuckets fetches a list of all buckets allowed to that particular client from FST Servers
 func getAccountBuckets(ctx context.Context, client MinioAdmin) ([]*models.Bucket, error) {
 	info, err := client.AccountInfo(ctx)
 	if err != nil {
@@ -1003,7 +1003,7 @@ func getBucketObjectLockingResponse(session *models.Principal, params bucketApi.
 	bucketName := params.BucketName
 	mClient, err := newMinioClient(session, getClientIP(params.HTTPRequest))
 	if err != nil {
-		return nil, ErrorWithContext(ctx, fmt.Errorf("error creating MinIO Client: %v", err))
+		return nil, ErrorWithContext(ctx, fmt.Errorf("error creating FST Client: %v", err))
 	}
 	// create a minioClient interface implementation
 	// defining the client to be used

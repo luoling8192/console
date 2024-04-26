@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -56,7 +56,7 @@ func TestGetLifecycleRules(t *testing.T) {
 	defer cancel()
 
 	// Test-1 : getBucketLifecycle() get list of events for a particular bucket only one config
-	// mock lifecycle response from MinIO
+	// mock lifecycle response from FST
 	mockLifecycle := lifecycle.Configuration{
 		Rules: []lifecycle.Rule{
 			{

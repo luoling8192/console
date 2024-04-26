@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -50,7 +50,7 @@ func TestStartProfiling(t *testing.T) {
 		Types: "cpu",
 	}
 
-	// Test-1 : startProfiling() Get response from MinIO server with one profiling object without errors
+	// Test-1 : startProfiling() Get response from FST server with one profiling object without errors
 	// mock function response from startProfiling()
 	minioStartProfiling = func(_ madmin.ProfilerType) ([]madmin.StartProfilingResult, error) {
 		return []madmin.StartProfilingResult{
@@ -80,7 +80,7 @@ func TestStartProfiling(t *testing.T) {
 	}
 	assert.Equal(err, nil)
 
-	// Test-2 : startProfiling() Correctly handles errors returned by MinIO
+	// Test-2 : startProfiling() Correctly handles errors returned by FST
 	// mock function response from startProfiling()
 	minioStartProfiling = func(_ madmin.ProfilerType) ([]madmin.StartProfilingResult, error) {
 		return nil, errors.New("error")

@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -202,7 +202,7 @@ func getListPoliciesWithBucketResponse(session *models.Principal, params bucketA
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 
@@ -218,7 +218,7 @@ func getListPoliciesWithBucketResponse(session *models.Principal, params bucketA
 	return listPoliciesResponse, nil
 }
 
-// listPoliciesWithBucket calls MinIO server to list all policy names present on the server that apply to a particular bucket.
+// listPoliciesWithBucket calls FST server to list all policy names present on the server that apply to a particular bucket.
 // listPoliciesWithBucket() converts the map[string][]byte returned by client.listPolicies()
 // to []*models.Policy by iterating over each key in policyRawMap and
 // then using Unmarshal on the raw bytes to create a *models.Policy
@@ -260,7 +260,7 @@ func policyMatchesBucket(ctx context.Context, policy *models.Policy, bucket stri
 	return false
 }
 
-// listPolicies calls MinIO server to list all policy names present on the server.
+// listPolicies calls FST server to list all policy names present on the server.
 // listPolicies() converts the map[string][]byte returned by client.listPolicies()
 // to []*models.Policy by iterating over each key in policyRawMap and
 // then using Unmarshal on the raw bytes to create a *models.Policy
@@ -288,7 +288,7 @@ func getListPoliciesResponse(session *models.Principal, params policyApi.ListPol
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 
@@ -508,7 +508,7 @@ func getListGroupsForPolicyResponse(session *models.Principal, params policyApi.
 	return filteredGroups, nil
 }
 
-// removePolicy() calls MinIO server to remove a policy based on name.
+// removePolicy() calls FST server to remove a policy based on name.
 func removePolicy(ctx context.Context, client MinioAdmin, name string) error {
 	err := client.removePolicy(ctx, name)
 	if err != nil {
@@ -532,7 +532,7 @@ func getRemovePolicyResponse(session *models.Principal, params policyApi.RemoveP
 	if err != nil {
 		return ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 
@@ -542,7 +542,7 @@ func getRemovePolicyResponse(session *models.Principal, params policyApi.RemoveP
 	return nil
 }
 
-// addPolicy calls MinIO server to add a canned policy.
+// addPolicy calls FST server to add a canned policy.
 // addPolicy() takes name and policy in string format, policy
 // policy must be string in json format, in the future this will change
 // to a Policy struct{} - https://github.com/minio/minio/issues/9171
@@ -575,7 +575,7 @@ func getAddPolicyResponse(session *models.Principal, params policyApi.AddPolicyP
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 	policy, err := addPolicy(ctx, adminClient, *params.Body.Name, *params.Body.Policy)
@@ -585,7 +585,7 @@ func getAddPolicyResponse(session *models.Principal, params policyApi.AddPolicyP
 	return policy, nil
 }
 
-// policyInfo calls MinIO server to retrieve information of a canned policy.
+// policyInfo calls FST server to retrieve information of a canned policy.
 // policyInfo() takes a policy name, obtains the []byte (represents a string in JSON format)
 // and return it as *models.Policy , in the future this will change
 // to a Policy struct{} - https://github.com/minio/minio/issues/9171
@@ -601,7 +601,7 @@ func policyInfo(ctx context.Context, client MinioAdmin, name string) (*models.Po
 	return policy, nil
 }
 
-// getPolicy Statements calls MinIO server to retrieve information of a canned policy.
+// getPolicy Statements calls FST server to retrieve information of a canned policy.
 // and returns the associated Statements
 func getPolicyStatements(ctx context.Context, client MinioAdmin, name string) ([]iampolicy.Statement, error) {
 	policyRaw, err := client.getPolicy(ctx, name)
@@ -620,7 +620,7 @@ func getPolicyInfoResponse(session *models.Principal, params policyApi.PolicyInf
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 	policyName, err := utils.DecodeBase64(params.Name)
@@ -634,7 +634,7 @@ func getPolicyInfoResponse(session *models.Principal, params policyApi.PolicyInf
 	return policy, nil
 }
 
-// SetPolicy calls MinIO server to assign policy to a group or user.
+// SetPolicy calls FST server to assign policy to a group or user.
 func SetPolicy(ctx context.Context, client MinioAdmin, name, entityName string, entityType models.PolicyEntity) error {
 	isGroup := false
 	if entityType == models.PolicyEntityGroup {
@@ -652,7 +652,7 @@ func getSetPolicyResponse(session *models.Principal, params policyApi.SetPolicyP
 	if err != nil {
 		return ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 
@@ -669,7 +669,7 @@ func getSetPolicyMultipleResponse(session *models.Principal, params policyApi.Se
 	if err != nil {
 		return ErrorWithContext(ctx, err)
 	}
-	// create a MinIO Admin Client interface implementation
+	// create a FST Admin Client interface implementation
 	// defining the client to be used
 	adminClient := AdminClient{Client: mAdmin}
 

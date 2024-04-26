@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -485,7 +485,7 @@ const BucketSummary = () => {
                     isLoading={loadingEncryption}
                     helpTip={
                       <Fragment>
-                        MinIO supports enabling automatic{" "}
+                        FST supports enabling automatic{" "}
                         <a
                           href="https://min.io/docs/minio/kubernetes/upstream/administration/server-side-encryption/server-side-encryption-sse-kms.html"
                           target="blank"
@@ -575,7 +575,7 @@ const BucketSummary = () => {
                       >
                         quota
                       </a>{" "}
-                      assigns a hard limit to a bucket beyond which MinIO does
+                      assigns a hard limit to a bucket beyond which FST does
                       not allow writes.
                     </Fragment>
                   }
@@ -673,7 +673,7 @@ const BucketSummary = () => {
                     isLoading={loadingRetention}
                     helpTip={
                       <Fragment>
-                        MinIO{" "}
+                        FST{" "}
                         <a
                           target="blank"
                           href="https://min.io/docs/minio/macos/administration/object-management.html#object-retention"

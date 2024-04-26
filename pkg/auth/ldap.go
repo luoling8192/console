@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -22,7 +22,7 @@ import (
 	"github.com/minio/minio-go/v7/pkg/credentials"
 )
 
-// GetCredentialsFromLDAP authenticates the user against MinIO when the LDAP integration is enabled
+// GetCredentialsFromLDAP authenticates the user against FST when the LDAP integration is enabled
 // if the authentication succeed *credentials.Login object is returned and we continue with the normal STSAssumeRole flow
 func GetCredentialsFromLDAP(client *http.Client, endpoint, ldapUser, ldapPassword string) (*credentials.Credentials, error) {
 	creds := credentials.New(&credentials.LDAPIdentity{

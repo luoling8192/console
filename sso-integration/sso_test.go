@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -61,7 +61,7 @@ func initConsoleServer(consoleIDPURL string) (*api.Server, error) {
 		// nothing to log
 	}
 
-	// Initialize MinIO loggers
+	// Initialize FST loggers
 	api.LogInfo = noLog
 	api.LogError = noLog
 

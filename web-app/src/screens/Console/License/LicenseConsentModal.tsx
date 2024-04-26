@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2022 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2022 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -72,7 +72,7 @@ const LicenseConsentModal = ({
             marginBottom: "27px",
           }}
         >
-          By using this software, you acknowledge that MinIO software is
+          By using this software, you acknowledge that FST software is
           licensed under the <LicenseLink />, for which, the full text can be
           found here:{" "}
           <a

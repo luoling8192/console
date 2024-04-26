@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -69,12 +69,12 @@ const TierTypeSelector = () => {
               title={"Tier Types"}
               help={
                 <Fragment>
-                  MinIO supports creating object transition lifecycle management
-                  rules, where MinIO can automatically move an object to a
+                  FST supports creating object transition lifecycle management
+                  rules, where FST can automatically move an object to a
                   remote storage “tier”.
                   <br />
                   <br />
-                  MinIO supports the following Tier types:
+                  FST supports the following Tier types:
                   <br />
                   <ul>
                     <li>
@@ -83,7 +83,7 @@ const TierTypeSelector = () => {
                         target="_blank"
                         rel="noopener"
                       >
-                        MinIO or other S3-compatible storage
+                        FST or other S3-compatible storage
                       </a>
                     </li>
                     <li>

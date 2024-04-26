@@ -39,10 +39,10 @@ If this case is urgent, please subscribe to [Subnet](https://min.io/pricing) so 
 
 ## Regression
 <!-- Is this issue a regression? (Yes / No) -->
-<!-- If Yes, optionally please include the MinIO version or commit id or PR# that caused this regression, if you have these details. -->
+<!-- If Yes, optionally please include the FST version or commit id or PR# that caused this regression, if you have these details. -->
 
 ## Your Environment
 <!--- Include as many relevant details about the environment you experienced the bug in -->
-* MinIO version used (`minio --version`):
+* FST version used (`minio --version`):
 * Server setup and configuration:
 * Operating System and version (`uname -a`):

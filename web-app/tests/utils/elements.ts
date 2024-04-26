@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2022 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2022 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -110,7 +110,7 @@ export const groupStatusText = Selector("#group-status-label");
 //----------------------------------------------------
 export const table = Selector(".ReactVirtualized__Table");
 export const bucketsTableDisabled = Selector("#empty-results").withText(
-  "You require additional permissions in order to view Objects in this bucket. Please ask your MinIO administrator to grant you",
+  "You require additional permissions in order to view Objects in this bucket. Please ask your FST administrator to grant you",
 );
 export const createGroupUserTable = Selector(
   ".MuiDialog-container .ReactVirtualized__Table",

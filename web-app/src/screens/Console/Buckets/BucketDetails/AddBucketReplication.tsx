@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2023 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2023 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -195,12 +195,12 @@ const AddBucketReplication = () => {
                     while the configured remote deployment acts as the “target”.
                   </Box>
                   <Box sx={{ paddingTop: "10px" }}>
-                    For each write operation to this "source" bucket, MinIO
+                    For each write operation to this "source" bucket, FST
                     checks all configured replication rules and applies the
                     matching rule with highest configured priority.
                   </Box>
                   <Box sx={{ paddingTop: "10px" }}>
-                    MinIO supports automatically replicating existing objects in
+                    FST supports automatically replicating existing objects in
                     a bucket, however it does not enable existing object
                     replication by default. Objects created before replication
                     was configured or while replication is disabled are not
@@ -208,7 +208,7 @@ const AddBucketReplication = () => {
                     existing objects is enabled.
                   </Box>
                   <Box sx={{ paddingTop: "10px" }}>
-                    MinIO supports replicating delete operations, where MinIO
+                    FST supports replicating delete operations, where FST
                     synchronizes deleting specific object versions and new
                     delete markers. Delete operation replication uses the same
                     replication process as all other replication operations.

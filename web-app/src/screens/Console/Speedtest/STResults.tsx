@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -393,7 +393,7 @@ const STResults = ({ results, start }: ISTResults) => {
                     <span className={"versionIcon"}>
                       <VersionIcon />
                     </span>{" "}
-                    MinIO VERSION&nbsp;<strong>{finalRes.version}</strong>
+                    FST VERSION&nbsp;<strong>{finalRes.version}</strong>
                   </Grid>
                   <Grid item xs={12} className={"tableOverflow"}>
                     <table

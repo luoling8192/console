@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -146,7 +146,7 @@ func TestListBucketEvents(t *testing.T) {
 	function := "listBucketEvents()"
 
 	////// Test-1 : listBucketEvents() get list of events for a particular bucket only one config
-	// mock bucketNotification response from MinIO
+	// mock bucketNotification response from FST
 	mockBucketN := notification.Configuration{
 		LambdaConfigs: []notification.LambdaConfig{},
 		TopicConfigs:  []notification.TopicConfig{},

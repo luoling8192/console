@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2023 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2023 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -157,7 +157,7 @@ func configureCallHomeDiagnostics(ctx context.Context, client MinioAdmin, diagSt
 
 	// SubSys is not supported, hence callhome not available
 	if !supportedSubSys {
-		return errors.New("your version of MinIO doesn't support this configuration")
+		return errors.New("your version of FST doesn't support this configuration")
 	}
 
 	enableStr := "off"

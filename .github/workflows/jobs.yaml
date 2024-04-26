@@ -129,7 +129,7 @@ jobs:
           go mod download
 
   latest-minio:
-    name: Build latest MinIO
+    name: Build latest FST
     runs-on: [ ubuntu-latest ]
     strategy:
       matrix:
@@ -142,7 +142,7 @@ jobs:
           repository: minio/minio
       - uses: actions/cache@v3
         id: minio-latest-cache
-        name: MinIO Latest Cache
+        name: FST Latest Cache
         with:
           path: |
             ./minio
@@ -216,7 +216,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NVMRC }}
-      - name: Install MinIO JS
+      - name: Install FST JS
         working-directory: ./
         continue-on-error: false
         run: |
@@ -234,7 +234,7 @@ jobs:
           docker stop minio || true;
           docker container prune -f || true;
 
-      - name: Start Console, MinIO and Nginx
+      - name: Start Console, FST and Nginx
         run: |
           (CONSOLE_SUBPATH=/console/subpath ./console server ) & (make test-initialize-minio-nginx)
 
@@ -265,7 +265,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NVMRC }}
-      - name: Install MinIO JS
+      - name: Install FST JS
         working-directory: ./
         continue-on-error: false
         run: |
@@ -313,7 +313,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NVMRC }}
-      - name: Install MinIO JS
+      - name: Install FST JS
         working-directory: ./
         continue-on-error: false
         run: |
@@ -360,7 +360,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NVMRC }}
-      - name: Install MinIO JS
+      - name: Install FST JS
         working-directory: ./
         continue-on-error: false
         run: |
@@ -407,7 +407,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NVMRC }}
-      - name: Install MinIO JS
+      - name: Install FST JS
         working-directory: ./
         continue-on-error: false
         run: |
@@ -450,7 +450,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NVMRC }}
-      - name: Install MinIO JS
+      - name: Install FST JS
         working-directory: ./
         continue-on-error: false
         run: |
@@ -493,7 +493,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NVMRC }}
-      - name: Install MinIO JS
+      - name: Install FST JS
         working-directory: ./
         continue-on-error: false
         run: |
@@ -536,7 +536,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NVMRC }}
-      - name: Install MinIO JS
+      - name: Install FST JS
         working-directory: ./
         continue-on-error: false
         run: |
@@ -578,7 +578,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NVMRC }}
-      - name: Install MinIO JS
+      - name: Install FST JS
         working-directory: ./
         continue-on-error: false
         run: |
@@ -621,7 +621,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NVMRC }}
-      - name: Install MinIO JS
+      - name: Install FST JS
         working-directory: ./
         continue-on-error: false
         run: |
@@ -667,7 +667,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NVMRC }}
-      - name: Install MinIO JS
+      - name: Install FST JS
         working-directory: ./
         continue-on-error: false
         run: |
@@ -773,7 +773,7 @@ jobs:
             ./api/coverage/
           key: ${{ runner.os }}-coverage-api-2-${{ github.run_id }}
   b-integration-tests:
-    name: Integration Tests with Latest Distributed MinIO
+    name: Integration Tests with Latest Distributed FST
     needs:
       - lint-job
       - ui-assets
@@ -796,7 +796,7 @@ jobs:
           path: "minio_repository"
       - uses: actions/cache@v3
         id: minio-latest-cache
-        name: MinIO Latest Cache
+        name: FST Latest Cache
         with:
           path: |
             ./minio
@@ -812,10 +812,10 @@ jobs:
         run: |
           echo "The idea is to build minio image from downloaded repository";
           cd $GITHUB_WORKSPACE/minio_repository;
-          echo "Get git version to build MinIO Image";
+          echo "Get git version to build FST Image";
           VERSION=`git rev-parse HEAD`;
           echo $VERSION;
-          echo "Create MinIO image";
+          echo "Create FST image";
           if [ ! -f ../minio ]; then
               echo "minio binary not found!, so compiling..."
               make docker VERSION=$VERSION;
@@ -893,7 +893,7 @@ jobs:
           path: "minio_repository"
       - uses: actions/cache@v3
         id: minio-latest-cache
-        name: MinIO Latest Cache
+        name: FST Latest Cache
         with:
           path: |
             ./minio
@@ -903,10 +903,10 @@ jobs:
         run: |
           echo "The idea is to build minio image from downloaded repository";
           cd $GITHUB_WORKSPACE/minio_repository;
-          echo "Get git version to build MinIO Image";
+          echo "Get git version to build FST Image";
           VERSION=`git rev-parse HEAD`;
           echo $VERSION;
-          echo "Create MinIO image";
+          echo "Create FST image";
           if [ ! -f ../minio ]; then
               echo "minio binary not found!, so compiling..."
               make docker VERSION=$VERSION;
@@ -968,7 +968,7 @@ jobs:
           path: "minio_repository"
       - uses: actions/cache@v3
         id: minio-latest-cache
-        name: MinIO Latest Cache
+        name: FST Latest Cache
         with:
           path: |
             ./minio
@@ -983,10 +983,10 @@ jobs:
           echo "updates to go.mod needed; to update it: go mod tidy"
           go mod tidy -compat=1.19
 
-          echo "Get git version to build MinIO Image";
+          echo "Get git version to build FST Image";
           VERSION=`git rev-parse HEAD`;
           echo $VERSION;
-          echo "Create MinIO image";
+          echo "Create FST image";
           if [ ! -f ../minio ]; then
               echo "minio binary not found!, so compiling..."
               make docker VERSION=$VERSION;

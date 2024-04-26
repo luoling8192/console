@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2023 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2023 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -72,7 +72,7 @@ const CallHomeConfirmation = ({
         <Fragment>
           Please Acknowledge that after doing this action, we will no longer
           receive updated cluster information automatically, losing the
-          potential benefits that Call Home provides to your MinIO cluster.
+          potential benefits that Call Home provides to your FST cluster.
           <Grid item xs={12} sx={{ margin: "15px 0" }}>
             Are you sure you want to disable SUBNET Call Home?
           </Grid>
@@ -153,7 +153,7 @@ const CallHomeConfirmation = ({
           <Grid item xs={12} sx={{ margin: "15px 0" }}>
             Please Acknowledge that the information provided will only be
             available in your SUBNET Account and it will not be shared to other
-            persons or entities besides MinIO team and you.
+            persons or entities besides FST team and you.
           </Grid>
           {loading && (
             <Grid

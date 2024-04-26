@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2023 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2023 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -138,18 +138,18 @@ const CallHome = () => {
                   >
                     <Box>
                       Enabling Call Home sends cluster health & status to your
-                      registered MinIO Subscription Network account every 24
+                      registered FST Subscription Network account every 24
                       hours.
                       <br />
                       <br />
-                      This helps the MinIO support team to provide quick
+                      This helps the FST support team to provide quick
                       incident responses along with suggestions for possible
-                      improvements that can be made to your MinIO instances.
+                      improvements that can be made to your FST instances.
                       <br />
                       <br />
                       Your cluster must be{" "}
                       <Link to={"/support/register"}>registered</Link> in the
-                      MinIO Subscription Network (SUBNET) before enabling this
+                      FST Subscription Network (SUBNET) before enabling this
                       feature.
                     </Box>
                   </Box>
@@ -189,7 +189,7 @@ const CallHome = () => {
                 label={"Live Error Logs"}
                 disabled={!clusterRegistered}
                 description={
-                  "Live Error Logs will enable MinIO's support team and automatic diagnostics system to catch failures early."
+                  "Live Error Logs will enable FST's support team and automatic diagnostics system to catch failures early."
                 }
               />
               <Box

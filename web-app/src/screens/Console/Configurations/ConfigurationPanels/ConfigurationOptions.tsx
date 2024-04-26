@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -107,7 +107,7 @@ const ConfigurationOptions = () => {
         <Grid item xs={12} id={"settings-container"}>
           <ScreenTitle
             icon={<SettingsIcon />}
-            title={"MinIO Configuration:"}
+            title={"FST Configuration:"}
             actions={
               <Box
                 sx={{
@@ -162,7 +162,7 @@ const ConfigurationOptions = () => {
             iconComponent={<SettingsIcon />}
             help={
               <Fragment>
-                MinIO supports a variety of configurations ranging from
+                FST supports a variety of configurations ranging from
                 encryption, compression, region, notifications, etc.
                 <br />
                 <br />

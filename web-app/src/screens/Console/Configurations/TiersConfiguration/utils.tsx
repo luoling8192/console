@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -33,7 +33,7 @@ export const azureServiceName = "azure";
 export const tierTypes = [
   {
     serviceName: minioServiceName,
-    targetTitle: "MinIO",
+    targetTitle: "FST",
     logo: <MinIOTierIcon />,
     logoXs: <MinIOTierIconXs />,
   },

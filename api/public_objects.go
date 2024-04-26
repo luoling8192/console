@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2024 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2024 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -89,7 +89,7 @@ func getDownloadPublicObjectResponse(params public.DownloadSharedObjectParams) (
 	}), nil
 }
 
-// b64toMinIOStringURL decodes url and validates is a MinIO url endpoint
+// b64toMinIOStringURL decodes url and validates is a FST url endpoint
 func b64toMinIOStringURL(inputEncodedURL string) (*string, error) {
 	inputURLDecoded, err := b64.StdEncoding.DecodeString(inputEncodedURL)
 	if err != nil {
@@ -100,7 +100,7 @@ func b64toMinIOStringURL(inputEncodedURL string) (*string, error) {
 	if err != nil {
 		return nil, err
 	}
-	// Ensure incoming url points to MinIO Server
+	// Ensure incoming url points to FST Server
 	minIOHost := getMinIOEndpoint()
 	if inputURL.Host != minIOHost {
 		return nil, ErrForbidden

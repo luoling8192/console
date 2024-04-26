@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -49,7 +49,7 @@ import (
 
 // enum types
 const (
-	objectStorage = iota // MinIO and S3 compatible cloud storage
+	objectStorage = iota // FST and S3 compatible cloud storage
 	fileSystem           // POSIX compatible file systems
 )
 
@@ -1004,7 +1004,7 @@ func getUploadObjectResponse(session *models.Principal, params objectApi.PostBuc
 	return nil
 }
 
-// uploadFiles gets files from http.Request form and uploads them to MinIO
+// uploadFiles gets files from http.Request form and uploads them to FST
 func uploadFiles(ctx context.Context, client MinioClient, params objectApi.PostBucketsBucketNameObjectsUploadParams) error {
 	var prefix string
 	if params.Prefix != nil {

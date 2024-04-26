@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2023 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2023 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -44,7 +44,7 @@ const OnlineRegistration = () => {
   return (
     <FormLayout
       icon={<OnlineRegistrationIcon />}
-      title={"Online activation of MinIO Subscription Network License"}
+      title={"Online activation of FST Subscription Network License"}
       withBorders={false}
       containerPadding={false}
       helpBox={<RegisterHelpBox />}
@@ -57,7 +57,7 @@ const OnlineRegistration = () => {
           marginBottom: "30px",
         }}
       >
-        Use your MinIO Subscription Network login credentials to register this
+        Use your FST Subscription Network login credentials to register this
         cluster.
       </Box>
       <Box

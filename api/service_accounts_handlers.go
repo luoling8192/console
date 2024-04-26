@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -149,7 +149,7 @@ func getCreateServiceAccountResponse(session *models.Principal, params saApi.Cre
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO user Admin Client interface implementation
+	// create a FST user Admin Client interface implementation
 	// defining the client to be used
 	userAdminClient := AdminClient{Client: userAdmin}
 
@@ -195,7 +195,7 @@ func getCreateAUserServiceAccountResponse(session *models.Principal, params user
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO user Admin Client interface implementation
+	// create a FST user Admin Client interface implementation
 	// defining the client to be used
 	userAdminClient := AdminClient{Client: userAdmin}
 	name, err := utils.DecodeBase64(params.Name)
@@ -227,7 +227,7 @@ func getCreateAUserServiceAccountCredsResponse(session *models.Principal, params
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO user Admin Client interface implementation
+	// create a FST user Admin Client interface implementation
 	// defining the client to be used
 	userAdminClient := AdminClient{Client: userAdmin}
 	serviceAccount := params.Body
@@ -270,7 +270,7 @@ func getCreateServiceAccountCredsResponse(session *models.Principal, params saAp
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO user Admin Client interface implementation
+	// create a FST user Admin Client interface implementation
 	// defining the client to be used
 	userAdminClient := AdminClient{Client: userAdmin}
 
@@ -340,7 +340,7 @@ func getUserServiceAccountsResponse(ctx context.Context, session *models.Princip
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO user Admin Client interface implementation
+	// create a FST user Admin Client interface implementation
 	// defining the client to be used
 	userAdminClient := AdminClient{Client: userAdmin}
 	user, err = utils.DecodeBase64(user)
@@ -371,7 +371,7 @@ func getDeleteServiceAccountResponse(session *models.Principal, params saApi.Del
 	if err != nil {
 		return ErrorWithContext(ctx, err)
 	}
-	// create a MinIO user Admin Client interface implementation
+	// create a FST user Admin Client interface implementation
 	// defining the client to be used
 	userAdminClient := AdminClient{Client: userAdmin}
 	if err := deleteServiceAccount(ctx, userAdminClient, accessKey); err != nil {
@@ -426,7 +426,7 @@ func getServiceAccountInfo(session *models.Principal, params saApi.GetServiceAcc
 	if err != nil {
 		return nil, ErrorWithContext(ctx, err)
 	}
-	// create a MinIO user Admin Client interface implementation
+	// create a FST user Admin Client interface implementation
 	// defining the client to be used
 	userAdminClient := AdminClient{Client: userAdmin}
 
@@ -467,7 +467,7 @@ func updateSetServiceAccountResponse(session *models.Principal, params saApi.Upd
 	if err != nil {
 		return ErrorWithContext(ctx, err)
 	}
-	// create a MinIO user Admin Client interface implementation
+	// create a FST user Admin Client interface implementation
 	// defining the client to be used
 	userAdminClient := AdminClient{Client: userAdmin}
 
@@ -494,7 +494,7 @@ func getDeleteMultipleServiceAccountsResponse(session *models.Principal, params 
 	if err != nil {
 		return ErrorWithContext(ctx, err)
 	}
-	// create a MinIO user Admin Client interface implementation
+	// create a FST user Admin Client interface implementation
 	// defining the client to be used
 	userAdminClient := AdminClient{Client: userAdmin}
 	for _, sa := range selectedSAs {

@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -129,7 +129,7 @@ func registerUsersHandlers(api *operations.ConsoleAPI) {
 }
 
 func listUsers(ctx context.Context, client MinioAdmin) ([]*models.User, error) {
-	// Get list of all users in the MinIO
+	// Get list of all users in the FST
 	// This call requires explicit authentication, no anonymous requests are
 	// allowed for listing users.
 	userMap, err := client.listUsers(ctx)
@@ -175,7 +175,7 @@ func getListUsersResponse(session *models.Principal, params userApi.ListUsersPar
 
 // addUser invokes adding a users on `MinioAdmin` and builds the response `models.User`
 func addUser(ctx context.Context, client MinioAdmin, accessKey, secretKey *string, groups []string, policies []string) (*models.User, error) {
-	// Calls into MinIO to add a new user if there's an errors return it
+	// Calls into FST to add a new user if there's an errors return it
 	if err := client.addUser(ctx, *accessKey, *secretKey); err != nil {
 		return nil, err
 	}
@@ -273,7 +273,7 @@ func getRemoveUserResponse(session *models.Principal, params userApi.RemoveUserP
 	return nil
 }
 
-// getUserInfo calls MinIO server get the User Information
+// getUserInfo calls FST server get the User Information
 func getUserInfo(ctx context.Context, client MinioAdmin, accessKey string) (*madmin.UserInfo, error) {
 	userInfo, err := client.getUserInfo(ctx, accessKey)
 	if err != nil {

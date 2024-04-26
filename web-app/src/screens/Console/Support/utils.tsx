@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2022 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2022 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -32,7 +32,7 @@ export const ClusterRegistered = ({ email }: { email: string }) => {
           <a href="https://subnet.min.io" target="_blank">
             SUBNET
           </a>{" "}
-          to avail support for this MinIO cluster
+          to avail support for this FST cluster
         </Box>
       </Grid>
     </Fragment>

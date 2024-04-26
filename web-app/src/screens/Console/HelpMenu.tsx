@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2023 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2023 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -195,7 +195,7 @@ const HelpMenu = () => {
       <div style={{ padding: 16 }}>
         <MoreLink
           LeadingIcon={MinIOTierIcon}
-          text={"Visit MinIO Documentation"}
+          text={"Visit FST Documentation"}
           link={"https://docs.min.io/?ref=con"}
           color={"#C5293F"}
         />
@@ -221,7 +221,7 @@ const HelpMenu = () => {
       <div style={{ padding: 16 }}>
         <MoreLink
           LeadingIcon={MinIOTierIcon}
-          text={"Visit MinIO Videos"}
+          text={"Visit FST Videos"}
           link={"https://min.io/videos?ref=con"}
           color={"#C5293F"}
         />
@@ -247,7 +247,7 @@ const HelpMenu = () => {
       <div style={{ padding: 16 }}>
         <MoreLink
           LeadingIcon={MinIOTierIcon}
-          text={"Visit MinIO Blog"}
+          text={"Visit FST Blog"}
           link={"https://blog.min.io/?ref=con"}
           color={"#C5293F"}
         />

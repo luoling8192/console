@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -114,7 +114,7 @@ func registerAdminBucketRemoteHandlers(api *operations.ConsoleAPI) {
 		err := deleteBucketReplicationRulesResponse(session, params)
 		if err != nil {
 			if err.Code == 500 && err.APIError.DetailedMessage == "The remote target does not exist" {
-				// We should ignore this MinIO error when deleting all replication rules
+				// We should ignore this FST error when deleting all replication rules
 				return bucketApi.NewDeleteAllReplicationRulesNoContent() // This will return 204 as per swagger spec
 			}
 			// If there is a different error, then we should handle it
@@ -514,7 +514,7 @@ func setMultiBucketReplicationResponse(session *models.Principal, params bucketA
 
 	mClient, err := newMinioClient(session, getClientIP(params.HTTPRequest))
 	if err != nil {
-		return nil, ErrorWithContext(ctx, fmt.Errorf("error creating MinIO Client: %v", err))
+		return nil, ErrorWithContext(ctx, fmt.Errorf("error creating FST Client: %v", err))
 	}
 	// create a minioClient interface implementation
 	// defining the client to be used
@@ -594,7 +594,7 @@ func deleteReplicationRule(ctx context.Context, session *models.Principal, bucke
 	clientIP := utils.ClientIPFromContext(ctx)
 	mClient, err := newMinioClient(session, clientIP)
 	if err != nil {
-		return fmt.Errorf("error creating MinIO Client: %v", err)
+		return fmt.Errorf("error creating FST Client: %v", err)
 	}
 	// create a minioClient interface implementation
 	// defining the client to be used
@@ -650,7 +650,7 @@ func deleteAllReplicationRules(ctx context.Context, session *models.Principal, b
 	mcClient := mcClient{client: s3Client}
 	mClient, err := newMinioClient(session, clientIP)
 	if err != nil {
-		return fmt.Errorf("error creating MinIO Client: %v", err)
+		return fmt.Errorf("error creating FST Client: %v", err)
 	}
 	// create a minioClient interface implementation
 	// defining the client to be used
@@ -687,7 +687,7 @@ func deleteSelectedReplicationRules(ctx context.Context, session *models.Princip
 	clientIP := utils.ClientIPFromContext(ctx)
 	mClient, err := newMinioClient(session, clientIP)
 	if err != nil {
-		return fmt.Errorf("error creating MinIO Client: %v", err)
+		return fmt.Errorf("error creating FST Client: %v", err)
 	}
 	// create a minioClient interface implementation
 	// defining the client to be used

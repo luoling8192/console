@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2023 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2023 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -137,7 +137,7 @@ const OBHeader = ({ bucketName }: IOBHeader) => {
                   tooltip={
                     configureBucketAllowed
                       ? "Configure Bucket"
-                      : "You do not have the required permissions to configure this bucket. Please contact your MinIO administrator to request " +
+                      : "You do not have the required permissions to configure this bucket. Please contact your FST administrator to request " +
                         IAM_ROLES.BUCKET_ADMIN +
                         " permisions."
                   }

@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2022 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2022 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -206,7 +206,7 @@ const SiteReplication = () => {
                 iconComponent={<ClustersIcon />}
                 help={
                   <Fragment>
-                    This feature allows multiple independent MinIO sites (or
+                    This feature allows multiple independent FST sites (or
                     clusters) that are using the same external IDentity Provider
                     (IDP) to be configured as replicas.
                     <br />
@@ -244,7 +244,7 @@ const SiteReplication = () => {
             iconComponent={<ClustersIcon />}
             help={
               <Fragment>
-                This feature allows multiple independent MinIO sites (or
+                This feature allows multiple independent FST sites (or
                 clusters) that are using the same external IDentity Provider
                 (IDP) to be configured as replicas. In this situation the set of
                 replica sites are referred to as peer sites or just sites.

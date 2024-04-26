@@ -71,13 +71,13 @@ test-integration:
 	@(docker stop minio || true)
 	@(docker stop minio2 || true)
 	@(docker network rm mynet123 || true)
-	@echo "create docker network to communicate containers MinIO & PostgreSQL"
+	@echo "create docker network to communicate containers FST & PostgreSQL"
 	@(docker network create --subnet=173.18.0.0/29 mynet123)
-	@echo "docker run with MinIO Version below:"
+	@echo "docker run with FST Version below:"
 	@echo $(MINIO_VERSION)
-	@echo "MinIO 1"
+	@echo "FST 1"
 	@(docker run -v /data1 -v /data2 -v /data3 -v /data4 --net=mynet123 -d --name minio --rm -p 9000:9000 -p 9091:9091 -e MINIO_KMS_SECRET_KEY=my-minio-key:OSMM+vkKUTCvQs9YL/CVMIMt43HFhkUpqJxTmGl6rYw= $(MINIO_VERSION) server /data{1...4} --console-address ':9091' && sleep 5)
-	@echo "MinIO 2"
+	@echo "FST 2"
 	@(docker run -v /data1 -v /data2 -v /data3 -v /data4 --net=mynet123 -d --name minio2 --rm -p 9001:9001 -p 9092:9092 -e MINIO_KMS_SECRET_KEY=my-minio-key:OSMM+vkKUTCvQs9YL/CVMIMt43HFhkUpqJxTmGl6rYw= $(MINIO_VERSION) server /data{1...4} --address ':9001' --console-address ':9092' && sleep 5)
 	@echo "Postgres"
 	@(docker run --net=mynet123 --ip=173.18.0.4 --name pgsqlcontainer --rm -p 5432:5432 -e POSTGRES_PASSWORD=password -d postgres && sleep 5)
@@ -139,9 +139,9 @@ test-replication:
 test-sso-integration:
 	@echo "create the network in bridge mode to communicate all containers"
 	@(docker network create my-net)
-	@echo "run openldap container using MinIO Image: quay.io/minio/openldap:latest"
+	@echo "run openldap container using FST Image: quay.io/minio/openldap:latest"
 	@(docker run \
-		-e LDAP_ORGANIZATION="MinIO Inc" \
+		-e LDAP_ORGANIZATION="FST Inc" \
 		-e LDAP_DOMAIN="min.io" \
 		-e LDAP_ADMIN_PASSWORD="admin" \
 		--network my-net \
@@ -149,7 +149,7 @@ test-sso-integration:
 		-p 636:636 \
 		--name openldap \
 		--detach quay.io/minio/openldap:latest)
-	@echo "Run Dex container using MinIO Image: quay.io/minio/dex:latest"
+	@echo "Run Dex container using FST Image: quay.io/minio/dex:latest"
 	@(docker run \
 		-e DEX_ISSUER=http://dex:5556/dex \
 		-e DEX_CLIENT_REDIRECT_URI=http://127.0.0.1:9090/oauth_callback \

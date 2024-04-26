@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -314,7 +314,7 @@ const BucketReplicationPanel = () => {
         <HelpTip
           content={
             <Fragment>
-              MinIO{" "}
+              FST{" "}
               <a
                 target="blank"
                 href="https://min.io/docs/minio/kubernetes/upstream/administration/bucket-replication.html"
@@ -386,7 +386,7 @@ const BucketReplicationPanel = () => {
             iconComponent={<BucketsIcon />}
             help={
               <Fragment>
-                MinIO supports server-side and client-side replication of
+                FST supports server-side and client-side replication of
                 objects between source and destination buckets.
                 <br />
                 <br />

@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2021 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2021 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -461,7 +461,7 @@ var widgets = []Metric{
 		Targets: []Target{
 			{
 				Expr:         `minio_cluster_drive_online_total{$__query}`,
-				LegendFormat: "Total online drives in MinIO Cluster",
+				LegendFormat: "Total online drives in FST Cluster",
 				Step:         60,
 			},
 		},

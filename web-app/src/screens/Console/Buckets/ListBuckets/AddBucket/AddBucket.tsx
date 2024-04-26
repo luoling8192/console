@@ -1,5 +1,5 @@
-// This file is part of MinIO Console Server
-// Copyright (c) 2022 MinIO, Inc.
+// This file is part of FST Console Server
+// Copyright (c) 2022 FST, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -234,7 +234,7 @@ const AddBucket = () => {
               title={"Buckets"}
               help={
                 <Fragment>
-                  MinIO uses buckets to organize objects. A bucket is similar to
+                  FST uses buckets to organize objects. A bucket is similar to
                   a folder or directory in a filesystem, where each bucket can
                   hold an arbitrary number of objects.
                   <br />
@@ -357,7 +357,7 @@ const AddBucket = () => {
                           be disabled <br />
                         </strong>
                       )}
-                      MinIO supports keeping multiple{" "}
+                      FST supports keeping multiple{" "}
                       <a
                         href="https://min.io/docs/minio/kubernetes/upstream/administration/object-management/object-versioning.html#minio-bucket-versioning"
                         target="blank"
@@ -403,7 +403,7 @@ const AddBucket = () => {
                           </a>{" "}
                           from versioning if Object Locking is not enabled.
                           <br />
-                          MinIO requires versioning to support replication.
+                          FST requires versioning to support replication.
                           <br />
                           Objects in excluded prefixes do not replicate to any
                           peer site or remote site.
@@ -502,7 +502,7 @@ const AddBucket = () => {
                       >
                         quota
                       </a>{" "}
-                      assigns a hard limit to a bucket beyond which MinIO does
+                      assigns a hard limit to a bucket beyond which FST does
                       not allow writes.
                     </Fragment>
                   }
@@ -552,7 +552,7 @@ const AddBucket = () => {
                     label={"Retention"}
                     helpTip={
                       <Fragment>
-                        MinIO supports setting both{" "}
+                        FST supports setting both{" "}
                         <a
                           href="https://min.io/docs/minio/macos/administration/object-management/object-retention.html#configure-bucket-default-object-retention"
                           target="blank"
@@ -597,7 +597,7 @@ const AddBucket = () => {
                             Compliance
                           </a>{" "}
                           lock protects Objects from write operations by all
-                          users, including the MinIO root user.
+                          users, including the FST root user.
                           <br />
                           <br />
                           <a
