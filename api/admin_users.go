@@ -22,15 +22,15 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/minio/console/pkg/utils"
+	"github.com/luoling8192/console/pkg/utils"
 
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime/middleware"
-	"github.com/minio/console/api/operations"
-	accountApi "github.com/minio/console/api/operations/account"
-	bucketApi "github.com/minio/console/api/operations/bucket"
-	userApi "github.com/minio/console/api/operations/user"
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/api/operations"
+	accountApi "github.com/luoling8192/console/api/operations/account"
+	bucketApi "github.com/luoling8192/console/api/operations/bucket"
+	userApi "github.com/luoling8192/console/api/operations/user"
+	"github.com/luoling8192/console/models"
 	"github.com/minio/madmin-go/v3"
 	iampolicy "github.com/minio/pkg/v2/policy"
 )

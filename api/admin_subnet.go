@@ -25,15 +25,15 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/minio/console/pkg/utils"
+	"github.com/luoling8192/console/pkg/utils"
 
-	xhttp "github.com/minio/console/pkg/http"
+	xhttp "github.com/luoling8192/console/pkg/http"
 
 	"github.com/go-openapi/runtime/middleware"
-	"github.com/minio/console/api/operations"
-	subnetApi "github.com/minio/console/api/operations/subnet"
-	"github.com/minio/console/models"
-	"github.com/minio/console/pkg/subnet"
+	"github.com/luoling8192/console/api/operations"
+	subnetApi "github.com/luoling8192/console/api/operations/subnet"
+	"github.com/luoling8192/console/models"
+	"github.com/luoling8192/console/pkg/subnet"
 	"github.com/minio/madmin-go/v3"
 )
 

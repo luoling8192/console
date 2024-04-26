@@ -27,7 +27,7 @@ import (
 
 	"github.com/go-openapi/runtime/middleware"
 
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/models"
 )
 
 // KMSDescribeSelfIdentityHandlerFunc turns a function with the right signature into a k m s describe self identity handler

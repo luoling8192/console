@@ -33,14 +33,14 @@ import (
 
 	"github.com/minio/minio-go/v7"
 
-	"github.com/minio/console/pkg/utils"
+	"github.com/luoling8192/console/pkg/utils"
 
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/runtime/middleware"
 	"github.com/klauspost/compress/zip"
-	"github.com/minio/console/api/operations"
-	objectApi "github.com/minio/console/api/operations/object"
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/api/operations"
+	objectApi "github.com/luoling8192/console/api/operations/object"
+	"github.com/luoling8192/console/models"
 	mc "github.com/minio/mc/cmd"
 	"github.com/minio/mc/pkg/probe"
 	"github.com/minio/minio-go/v7/pkg/tags"

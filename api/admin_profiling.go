@@ -21,7 +21,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/models"
 	"github.com/minio/madmin-go/v3"
 	"github.com/minio/websocket"
 )

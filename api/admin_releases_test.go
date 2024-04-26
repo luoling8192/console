@@ -24,9 +24,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/minio/console/api/operations"
-	release "github.com/minio/console/api/operations/release"
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/api/operations"
+	release "github.com/luoling8192/console/api/operations/release"
+	"github.com/luoling8192/console/models"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
 )

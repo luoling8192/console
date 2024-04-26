@@ -28,12 +28,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/minio/console/pkg/utils"
+	"github.com/luoling8192/console/pkg/utils"
 
 	"github.com/go-openapi/runtime/middleware"
-	"github.com/minio/console/api/operations"
-	systemApi "github.com/minio/console/api/operations/system"
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/api/operations"
+	systemApi "github.com/luoling8192/console/api/operations/system"
+	"github.com/luoling8192/console/models"
 )
 
 func registerAdminInfoHandlers(api *operations.ConsoleAPI) {

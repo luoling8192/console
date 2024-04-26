@@ -24,17 +24,17 @@ import (
 	"sort"
 	"strings"
 
-	bucketApi "github.com/minio/console/api/operations/bucket"
-	policyApi "github.com/minio/console/api/operations/policy"
-	"github.com/minio/console/pkg/utils"
+	bucketApi "github.com/luoling8192/console/api/operations/bucket"
+	policyApi "github.com/luoling8192/console/api/operations/policy"
+	"github.com/luoling8192/console/pkg/utils"
 	s3 "github.com/minio/minio-go/v7"
 
 	"github.com/go-openapi/runtime/middleware"
-	"github.com/minio/console/api/operations"
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/api/operations"
+	"github.com/luoling8192/console/models"
 	iampolicy "github.com/minio/pkg/v2/policy"
 
-	policies "github.com/minio/console/api/policy"
+	policies "github.com/luoling8192/console/api/policy"
 )
 
 func registersPoliciesHandler(api *operations.ConsoleAPI) {

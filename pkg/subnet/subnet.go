@@ -21,9 +21,9 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/minio/console/pkg/http"
+	"github.com/luoling8192/console/pkg/http"
 
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/models"
 	"github.com/minio/madmin-go/v3"
 	mc "github.com/minio/mc/cmd"
 	"github.com/tidwall/gjson"

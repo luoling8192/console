@@ -27,7 +27,7 @@ import (
 
 	"github.com/go-openapi/runtime/middleware"
 
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/models"
 )
 
 // AddMultiBucketLifecycleHandlerFunc turns a function with the right signature into a add multi bucket lifecycle handler

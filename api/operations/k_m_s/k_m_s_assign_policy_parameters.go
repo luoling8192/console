@@ -32,7 +32,7 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/models"
 )
 
 // NewKMSAssignPolicyParams creates a new KMSAssignPolicyParams object

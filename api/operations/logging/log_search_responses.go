@@ -27,7 +27,7 @@ import (
 
 	"github.com/go-openapi/runtime"
 
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/models"
 )
 
 // LogSearchOKCode is the HTTP code returned for type LogSearchOK

@@ -24,12 +24,12 @@ import (
 	"os"
 	"testing"
 
-	"github.com/minio/console/pkg/utils"
+	"github.com/luoling8192/console/pkg/utils"
 
 	"github.com/go-openapi/swag"
-	"github.com/minio/console/api/operations"
-	bucketApi "github.com/minio/console/api/operations/bucket"
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/api/operations"
+	bucketApi "github.com/luoling8192/console/api/operations/bucket"
+	"github.com/luoling8192/console/models"
 	"github.com/minio/madmin-go/v3"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"

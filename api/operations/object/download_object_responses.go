@@ -28,7 +28,7 @@ import (
 
 	"github.com/go-openapi/runtime"
 
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/models"
 )
 
 // DownloadObjectOKCode is the HTTP code returned for type DownloadObjectOK

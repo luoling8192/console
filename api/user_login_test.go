@@ -28,7 +28,7 @@ import (
 
 	iampolicy "github.com/minio/pkg/v2/policy"
 
-	"github.com/minio/console/pkg/auth"
+	"github.com/luoling8192/console/pkg/auth"
 
 	"github.com/minio/minio-go/v7/pkg/credentials"
 	"github.com/stretchr/testify/assert"

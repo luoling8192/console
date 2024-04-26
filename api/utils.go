@@ -26,7 +26,7 @@ import (
 	"strings"
 	"time"
 
-	xjwt "github.com/minio/console/pkg/auth/token"
+	xjwt "github.com/luoling8192/console/pkg/auth/token"
 )
 
 // Do not use:

@@ -28,7 +28,7 @@ import (
 	"time"
 
 	"github.com/mattn/go-ieproxy"
-	xhttp "github.com/minio/console/pkg/http"
+	xhttp "github.com/luoling8192/console/pkg/http"
 	"github.com/tidwall/gjson"
 
 	"github.com/minio/madmin-go/v3"

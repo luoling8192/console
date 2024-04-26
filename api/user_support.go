@@ -21,10 +21,10 @@ import (
 	"fmt"
 
 	"github.com/go-openapi/runtime/middleware"
-	"github.com/minio/console/api/operations"
-	"github.com/minio/console/api/operations/support"
-	"github.com/minio/console/models"
-	"github.com/minio/console/pkg/subnet"
+	"github.com/luoling8192/console/api/operations"
+	"github.com/luoling8192/console/api/operations/support"
+	"github.com/luoling8192/console/models"
+	"github.com/luoling8192/console/pkg/subnet"
 	"golang.org/x/net/context"
 )
 

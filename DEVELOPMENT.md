@@ -62,7 +62,7 @@ In the FST repository open `go.mod` and after the first `require()` directive ad
 )
 
 replace (
-github.com/minio/console => "../console"
+github.com/luoling8192/console => "../console"
 )
 
 require (

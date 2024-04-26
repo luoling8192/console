@@ -27,10 +27,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/minio/console/pkg/logger"
-	"github.com/minio/console/pkg/utils"
+	"github.com/luoling8192/console/pkg/logger"
+	"github.com/luoling8192/console/pkg/utils"
 
-	subnet "github.com/minio/console/pkg/subnet"
+	subnet "github.com/luoling8192/console/pkg/subnet"
 	"github.com/minio/madmin-go/v3"
 	mc "github.com/minio/mc/cmd"
 	"github.com/minio/websocket"

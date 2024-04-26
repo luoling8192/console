@@ -33,11 +33,11 @@ import (
 
 	"github.com/minio/pkg/v2/env"
 
-	"github.com/minio/console/pkg"
+	"github.com/luoling8192/console/pkg"
 	"github.com/minio/pkg/v2/certs"
 
-	"github.com/minio/console/pkg/logger/config"
-	"github.com/minio/console/pkg/logger/message/log"
+	"github.com/luoling8192/console/pkg/logger/config"
+	"github.com/luoling8192/console/pkg/logger/message/log"
 	"github.com/minio/highwayhash"
 	"github.com/minio/minio-go/v7/pkg/set"
 )

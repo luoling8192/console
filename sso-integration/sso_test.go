@@ -30,12 +30,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/minio/console/models"
+	"github.com/luoling8192/console/models"
 
 	"github.com/go-openapi/loads"
-	"github.com/minio/console/api"
-	"github.com/minio/console/api/operations"
-	consoleoauth2 "github.com/minio/console/pkg/auth/idp/oauth2"
+	"github.com/luoling8192/console/api"
+	"github.com/luoling8192/console/api/operations"
+	consoleoauth2 "github.com/luoling8192/console/pkg/auth/idp/oauth2"
 	"github.com/stretchr/testify/assert"
 )
 

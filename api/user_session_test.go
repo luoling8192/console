@@ -22,11 +22,11 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/minio/console/pkg/utils"
+	"github.com/luoling8192/console/pkg/utils"
 
-	"github.com/minio/console/models"
-	"github.com/minio/console/pkg/auth/idp/oauth2"
-	"github.com/minio/console/pkg/auth/ldap"
+	"github.com/luoling8192/console/models"
+	"github.com/luoling8192/console/pkg/auth/idp/oauth2"
+	"github.com/luoling8192/console/pkg/auth/ldap"
 	"github.com/stretchr/testify/assert"
 )
 
